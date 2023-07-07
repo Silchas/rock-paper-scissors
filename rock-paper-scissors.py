@@ -42,12 +42,14 @@ while True:
             else:
                 print('Rock beats scissors!. You lose.')
                 computer_score += 1
+        if user_score == 2 or computer_score == 2:
+            break
     if user_score > computer_score:
-        print('You won', user_score, 'out of 3 rounds. Congratulations!')
+        print('You won', user_score, 'out of', i+1, 'rounds. Congratulations!')
     elif computer_score > user_score:
-        print('The computer won', computer_score, 'out of 3 rounds. Better luck next time!')
+        print('The computer won', computer_score, 'out of', i+1, 'rounds. Better luck next time!')
     else:
         print('The game ended in a tie!')
-    play_again = input('Play another set of three rounds? (y/n):')
+    play_again = input('Play another set of rounds? (y/n):')
     if play_again.lower() != 'y':
         break
